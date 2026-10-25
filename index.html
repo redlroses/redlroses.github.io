@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Евгений Батенков — Unity / XR Developer &amp; Software Engineer</title>
+    <meta
+      name="description"
+      content="Евгений Батенков — Unity, .NET &amp; XR Software Engineer. Разработка коммерческих VR-аттракционов, приложений на .NET MAUI, сетевых платформ и инструментов автоматизации."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const systemTheme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : systemTheme;
+
+        const savedLang = localStorage.getItem('portfolio-lang');
+        const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        document.documentElement.lang = savedLang === 'ru' || savedLang === 'en' ? savedLang : (browserLang.startsWith('ru') ? 'ru' : 'en');
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <div class="portfolio-container">
+      <!-- Site Nav -->
+      <header class="site-nav">
+        <div class="brand-block">
+          <a href="#" class="brand-name">Evgeny Batenkov</a>
+          <span class="brand-sub">
+            <span class="lang-ru">Unity &bull; .NET &bull; XR Engineering</span>
+            <span class="lang-en">Unity &bull; .NET &bull; XR Engineering</span>
+          </span>
+        </div>
+
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li>
+              <a href="#experience">
+                <span class="lang-ru">Опыт</span>
+                <span class="lang-en">Experience</span>
+              </a>
+            </li>
+            <li>
+              <a href="#highlights">
+                <span class="lang-ru">Флагманы</span>
+                <span class="lang-en">Highlights</span>
+              </a>
+            </li>
+            <li>
+              <a href="#stack">
+                <span class="lang-ru">Стек</span>
+                <span class="lang-en">Stack</span>
+              </a>
+            </li>
+            <li>
+              <a href="#work">
+                <span class="lang-ru">Все проекты</span>
+                <span class="lang-en">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                <span class="lang-ru">Обо мне</span>
+                <span class="lang-en">About</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Language Switcher -->
+          <div class="lang-switch" role="group" aria-label="Language selector">
+            <button type="button" class="lang-btn" data-lang-choice="ru">RU</button>
+            <span class="lang-sep">/</span>
+            <button type="button" class="lang-btn" data-lang-choice="en">EN</button>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Header -->
+      <section class="hero-section">
+        <div class="meta-status-row">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span class="lang-ru">Открыт к предложениям</span>
+            <span class="lang-en">Open for engineering roles</span>
+          </div>
+          <span class="location-text">
+            <span class="lang-ru">Екатеринбург &bull; Удаленно / Релокация</span>
+            <span class="lang-en">Yekaterinburg &bull; Remote / Relocation</span>
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="lang-ru">Евгений Батенков</span>
+          <span class="lang-en">Evgeny Batenkov</span>
+        </h1>
+
+        <p class="hero-lead">
+          <span class="lang-ru">
+            Инженер-разработчик <strong>Unity, C# и XR</strong> с 4+ годами коммерческого опыта. Создаю коммерческие VR-аттракционы, сетевые площадки, приложения на <strong>.NET MAUI</strong>, симуляции и внутренние инструменты для команд. В работе ценю надежный сетевой код, чистую архитектуру и стабильную производительность.
+          </span>
+          <span class="lang-en">
+            <strong>Unity, C#, and XR Software Engineer</strong> with 4+ years of production experience. I build commercial VR attractions, multiplayer venues, companion apps on <strong>.NET MAUI</strong>, simulations, and developer automation tooling. Focused on resilient networking, clean architecture, and rock-solid performance.
+          </span>
+        </p>
+
+        <!-- Concise Info Chips -->
+        <div class="info-badges-row">
+          <span class="info-chip">
+            <span class="lang-ru"><strong>Специализация:</strong> Unity, C#, .NET MAUI, XR</span>
+            <span class="lang-en"><strong>Focus:</strong> Unity, C#, .NET MAUI, XR</span>
+          </span>
+          <span class="info-chip">
+            <span class="lang-ru"><strong>Опыт:</strong> 4+ года коммерческой разработки</span>
+            <span class="lang-en"><strong>Experience:</strong> 4+ years commercial</span>
+          </span>
+          <span class="info-chip">
+            <span class="lang-ru"><strong>Платформы:</strong> PC VR, Meta Quest, Android, Windows</span>
+            <span class="lang-en"><strong>Platforms:</strong> PC VR, Meta Quest, Android, Windows</span>
+          </span>
+          <span class="info-chip">
+            <span class="lang-ru"><strong>Английский:</strong> B1</span>
+            <span class="lang-en"><strong>English:</strong> B1</span>
+          </span>
+        </div>
+
+        <!-- Contact Links -->
+        <div class="contact-row">
+          <a href="mailto:redlroses.rlr@gmail.com" class="contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            redlroses.rlr@gmail.com
+          </a>
+          <a href="https://t.me/redlroses" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            @redlroses
+          </a>
+          <a href="https://github.com/redlroses" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            github.com/redlroses
+          </a>
+          <a href="tel:+79501955185" class="contact-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +7 (950) 195-51-85
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: Experience (Artem's Style) -->
+      <section class="section-block" id="experience">
+        <div class="section-header">
+          <span class="section-label">
+            <span class="lang-ru">Опыт работы</span>
+            <span class="lang-en">Experience</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-ru">Карьера и компании</span>
+            <span class="lang-en">Work Experience</span>
+          </h2>
+        </div>
+
+        <div class="experience-list">
+          <!-- JetStyle -->
+          <article class="experience-card">
+            <div class="experience-top">
+              <h3 class="experience-company">JetXR &bull; JetStyle</h3>
+              <span class="experience-date">
+                <span class="lang-ru">Апрель 2024 — настоящее время</span>
+                <span class="lang-en">Apr 2024 — Present</span>
+              </span>
+            </div>
+            <p class="experience-role">Unity Developer &amp; Software Engineer</p>
+            <div class="experience-body">
+              <p>
+                <span class="lang-ru">
+                  Разрабатываю коммерческие XR-приложения, VR-аттракционы, симуляции и сопутствующий софт с использованием C#/.NET, Unity и .NET MAUI под автономные шлемы (Meta Quest), PC VR (HTC Vive) и мобильные устройства. Проектирую архитектуру приложений, сетевое взаимодействие и логику сессий, собираю интерфейсы и оптимизирую производительность под ограниченное «железо».
+                </span>
+                <span class="lang-en">
+                  Develop commercial XR applications, VR attractions, simulations, and companion tools with C#/.NET, Unity, and .NET MAUI for standalone headsets (Meta Quest), PC VR (HTC Vive), and mobile devices. Design application architecture, networking layers, session management, user interfaces, and optimize performance on constrained hardware.
+                </span>
+              </p>
+              <p>
+                <span class="lang-ru">
+                  Участвую в разработке ключевых коммерческих XR-продуктов компании, а также создаю внутренние UPM-пакеты автоматизации сборок, используемые всей инженерной командой.
+                </span>
+                <span class="lang-en">
+                  Contribute to the company's core commercial XR products and engineer internal UPM automation packages used across the engineering team.
+                </span>
+              </p>
+            </div>
+            <div>
+              <a href="https://jetxr.style/" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                <span>JetXR website</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- THC -->
+          <article class="experience-card">
+            <div class="experience-top">
+              <h3 class="experience-company">THC</h3>
+              <span class="experience-date">
+                <span class="lang-ru">Май 2023 — Апрель 2024</span>
+                <span class="lang-en">May 2023 — Apr 2024</span>
+              </span>
+            </div>
+            <p class="experience-role">Unity Developer</p>
+            <div class="experience-body">
+              <p>
+                <span class="lang-ru">
+                  Разрабатывал мобильные игры на C# и Unity под платформу Android. Проектировал игровую архитектуру на базе ECS (Entitas), создавал физику и механики, оптимизировал потребление памяти и частоту кадров под бюджетные смартфоны. Выпустил в релиз в Google Play мобильную аркаду Flash Ball в составе команды из 6 человек.
+                </span>
+                <span class="lang-en">
+                  Developed mobile games in C# and Unity for the Android platform. Architected gameplay systems using ECS (Entitas), implemented physics and mechanics, and optimized memory usage and framerate for budget devices. Released the mobile arcade title Flash Ball on Google Play as part of a 6-person team.
+                </span>
+              </p>
+            </div>
+            <div>
+              <a href="https://play.google.com/store/apps/details?id=com.THC.flashball" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                <span>Flash Ball on Google Play</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Highlight Projects -->
+      <section class="section-block" id="highlights">
+        <div class="section-header">
+          <span class="section-label">
+            <span class="lang-ru">Флагманские проекты</span>
+            <span class="lang-en">Highlight Projects</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-ru">Ключевые системы и разработка</span>
+            <span class="lang-en">Key Systems &amp; Architecture</span>
+          </h2>
+          <p class="section-desc">
+            <span class="lang-ru">Подробный разбор трех крупных коммерческих проектов, где я отвечал за архитектуру приложений, сеть и ключевые фичи.</span>
+            <span class="lang-en">Deep dive into three major commercial projects where I architected standalone applications, networking layers, and core runtime systems.</span>
+          </p>
+        </div>
+
+        <div class="highlights-list">
+          <!-- 1. Stuntman -->
+          <article class="highlight-project">
+            <div class="highlight-top">
+              <div class="highlight-title-group">
+                <span class="highlight-domain">LBE VR Attraction &bull; .NET MAUI &bull; Distributed System</span>
+                <h3 class="highlight-title">Stuntman &amp; Stuntman Operator</h3>
+                <span class="highlight-meta">
+                  <span class="lang-ru">JetStyle &bull; Февраль 2026 — Август 2026 &bull; Разработчик приложения на MAUI и сетевой части</span>
+                  <span class="lang-en">JetStyle &bull; Feb 2026 — Aug 2026 &bull; MAUI App &amp; Networking Lead</span>
+                </span>
+              </div>
+              <div class="tags-row">
+                <span class="tag">.NET MAUI</span>
+                <span class="tag">C#</span>
+                <span class="tag">Unity</span>
+                <span class="tag">HDRP</span>
+                <span class="tag">OpenXR</span>
+                <span class="tag">HTC Vive</span>
+                <span class="tag">Sockets / TCP</span>
+              </div>
+            </div>
+
+            <p class="highlight-overview">
+              <span class="lang-ru">
+                Кинематографичный VR-аттракцион на шлемах HTC Vive. Игрок проходит трюковые сцены в VR, а оператор управляет сессией и снимает происходящее через отдельное приложение на планшете.
+              </span>
+              <span class="lang-en">
+                Cinematic VR stunt attraction on HTC Vive headsets. Players experience stunt scenes in VR, while an operator manages the session and films the action using a companion tablet app.
+              </span>
+            </p>
+
+            <div class="thematic-blocks">
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Приложение на .NET MAUI и комбинированная съемка.</strong> Разработал приложение оператора для планшета с трекером Vive. Планшет одновременно снимает игрока в реальности и виртуальную сцену с синхронизированной камеры, а после сессии видео автоматически склеиваются в готовый клип.
+                </span>
+                <span class="lang-en">
+                  <strong>.NET MAUI App &amp; Dual-Camera Filming.</strong> Built the companion tablet app with a mounted Vive tracker. It simultaneously records the player in reality and in VR from a matched angle, automatically editing the footage into a finished video clip after the run.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Сетевой протокол, видеостриминг и сессии.</strong> Написал сетевой обмен между сервером игры и приложением на MAUI: реализовал стриминг картинки из игры прямо на экран планшета в реальном времени, синхронизацию записи, передачу голоса оператора в шлем и авто-реконнект при сбоях Wi-Fi.
+                </span>
+                <span class="lang-en">
+                  <strong>Networking Protocol, Video Streaming &amp; Sessions.</strong> Built the communication layer between the game server and the MAUI app: implemented real-time in-game video streaming directly to the tablet screen, recording trigger sync, operator voice transmission to the headset, and Wi-Fi auto-reconnect.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Геймплейные фичи в VR.</strong> Реализация различных игровых механик: работа с физикой, запекание симуляций в анимации и интерактивное окружение сцен.
+                </span>
+                <span class="lang-en">
+                  <strong>VR Gameplay Features.</strong> Implemented in-game interactive mechanics, physical interactions, baking simulations into animations, and scene environment features.
+                </span>
+              </p>
+            </div>
+
+            <div class="highlight-bottom">
+              <span class="highlight-meta">
+                <span class="lang-ru">Статус: Запущен в коммерческую эксплуатацию</span>
+                <span class="lang-en">Status: Shipped to commercial operation</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- 2. Warpoint Kidz -->
+          <article class="highlight-project">
+            <div class="highlight-top">
+              <div class="highlight-title-group">
+                <span class="highlight-domain">Multiplayer LBE VR Platform &bull; Unity 6</span>
+                <h3 class="highlight-title">Warpoint Kidz</h3>
+                <span class="highlight-meta">
+                  <span class="lang-ru">JetStyle / Warpoint &bull; Июль 2026 — настоящее время &bull; Мобильный пульт, геймплей и сеть</span>
+                  <span class="lang-en">JetStyle / Warpoint &bull; Jul 2026 — Present &bull; Mobile Console, Gameplay &amp; Network</span>
+                </span>
+              </div>
+              <div class="tags-row">
+                <span class="tag">Unity 6</span>
+                <span class="tag">C#</span>
+                <span class="tag">Mirror</span>
+                <span class="tag">OpenXR</span>
+                <span class="tag">Meta Quest</span>
+                <span class="tag">Android</span>
+              </div>
+            </div>
+
+            <p class="highlight-overview">
+              <span class="lang-ru">
+                Сборник многопользовательских детских мини-игр в виртуальной реальности для сети коммерческих VR-арен Warpoint.
+              </span>
+              <span class="lang-en">
+                Collection of multiplayer VR mini-games for the commercial Warpoint arena network.
+              </span>
+            </p>
+
+            <div class="thematic-blocks">
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Управляющее мобильное приложение.</strong> Собрал интерфейс и написал клиентскую логику для планшета оператора на Unity: управление сессиями, запуск мини-игр и мониторинг состояния шлемов.
+                </span>
+                <span class="lang-en">
+                  <strong>Mobile Operator Console.</strong> Built the UI and client application logic for the operator's tablet in Unity: session management, mini-game launching, and headset monitoring.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Геймплей и прототипирование.</strong> Разрабатывал механики для мини-игр сборника и с нуля создал рабочий прототип новой VR-игры.
+                </span>
+                <span class="lang-en">
+                  <strong>Gameplay &amp; Prototyping.</strong> Developed gameplay mechanics across multiple mini-games and built a playable prototype for a new VR game from scratch.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Оптимизация сети.</strong> Оптимизировал сетевой обмен на Mirror между шлемами и сервером, устранив лишнюю синхронизацию и задержки.
+                </span>
+                <span class="lang-en">
+                  <strong>Network Optimization.</strong> Optimized network communication over Mirror between headsets and the server, eliminating redundant state replication and latency.
+                </span>
+              </p>
+            </div>
+
+            <div class="highlight-bottom">
+              <span class="highlight-meta">
+                <span class="lang-ru">Статус: Запущено на сети VR-арен</span>
+                <span class="lang-en">Status: Deployed to commercial arenas</span>
+              </span>
+              <div class="project-links">
+                <a href="https://warpoint.ru/" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                  <span>Warpoint</span>
+                  <span class="arrow-icon">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. BIM-VR -->
+          <article class="highlight-project">
+            <div class="highlight-top">
+              <div class="highlight-title-group">
+                <span class="highlight-domain">Enterprise VR/AR &bull; CAD/BIM &bull; Mixed Reality</span>
+                <h3 class="highlight-title">BIM-VR</h3>
+                <span class="highlight-meta">
+                  <span class="lang-ru">JetStyle &bull; Август 2025 — настоящее время &bull; Разработка в команде</span>
+                  <span class="lang-en">JetStyle &bull; Aug 2025 — Present &bull; Engineering Team Developer</span>
+                </span>
+              </div>
+              <div class="tags-row">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">OpenXR</span>
+                <span class="tag">Meta Quest</span>
+                <span class="tag">Passthrough / AR</span>
+                <span class="tag">HLSL / Shaders</span>
+                <span class="tag">URP</span>
+              </div>
+            </div>
+
+            <p class="highlight-overview">
+              <span class="lang-ru">
+                Корпоративное VR/AR-приложение для архитекторов, проектировщиков и инженеров. Позволяет загружать сложные CAD/BIM модели зданий для совместного поиска коллизий, проверки инженерных сетей и заметок прямо в виртуальном и дополненном пространстве. Работаю на проекте в команде.
+              </span>
+              <span class="lang-en">
+                Enterprise VR/AR application for architectural and construction engineering teams to collaboratively inspect CAD/BIM models, find collisions, and review blueprints in virtual and augmented reality. Working on the project as part of an engineering team.
+              </span>
+            </p>
+
+            <div class="thematic-blocks">
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>AR-режим.</strong> Разработал режим дополненной реальности (AR), в котором виртуальная 3D-модель выравнивается и точно совмещается с реальным физическим объектом по опорным точкам.
+                </span>
+                <span class="lang-en">
+                  <strong>AR Mode.</strong> Developed an Augmented Reality (AR) mode where the virtual 3D model is aligned and registered to the physical real-world structure using anchor reference points.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Шейдер Edge Detection.</strong> Для AR-режима написал кастомный пост-процесс шейдер на HLSL: он подсвечивает грани модели, позволяя через шлем четко видеть нетекстурированные детали и стыки конструкций поверх реального мира.
+                </span>
+                <span class="lang-en">
+                  <strong>Edge Detection Shader.</strong> Developed a custom HLSL screen-space edge-detection shader for the AR mode, visually outlining model boundaries and creases over the physical camera view to inspect alignment and tolerances.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>3D-измерения и виртуальная клавиатура.</strong> Создал инструмент пространственной линейки для точных замеров между объектами и виртуальную клавиатуру для ввода инженерных заметок в шлеме.
+                </span>
+                <span class="lang-en">
+                  <strong>Spatial 3D Measurements &amp; Keyboard.</strong> Built real-time spatial measurement tools for taking measurements inside the headset and an in-VR virtual keyboard for typing engineering reports.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Динамическая загрузка аватаров.</strong> Реализовал систему получения аватаров с бэкенда: асинхронное скачивание моделей и их применение на пользователей в рантайме во время многопользовательской сессии.
+                </span>
+                <span class="lang-en">
+                  <strong>Dynamic Avatar Loading.</strong> Engineered a runtime avatar retrieval pipeline from the backend: asynchronously downloading user avatar models and instantiating them onto networked players during live sessions.
+                </span>
+              </p>
+            </div>
+
+            <div class="highlight-bottom">
+              <span class="highlight-meta">
+                <span class="lang-ru">Статус: В активной командной разработке</span>
+                <span class="lang-en">Status: In active team development</span>
+              </span>
+              <div class="project-links">
+                <a href="https://jetxr.style/bim-vr" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                  <span>BIM-VR Case Study</span>
+                  <span class="arrow-icon">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Technical Stack -->
+      <section class="section-block" id="stack">
+        <div class="section-header">
+          <span class="section-label">
+            <span class="lang-ru">Компетенции</span>
+            <span class="lang-en">Competencies</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-ru">Технический стек</span>
+            <span class="lang-en">Skills &amp; Technologies</span>
+          </h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- 1. Languages & Platforms -->
+          <div class="skill-col">
+            <span class="skill-col-title">
+              <span class="lang-ru">Языки и платформы</span>
+              <span class="lang-en">Languages &amp; Platforms</span>
+            </span>
+            <ul class="skill-col-list">
+              <li>
+                <span class="lang-ru"><strong>C# / .NET</strong> (4+ года коммерческого опыта)</span>
+                <span class="lang-en"><strong>C# / .NET</strong> (4+ years commercial)</span>
+              </li>
+              <li><strong>Unity</strong></li>
+              <li><strong>.NET MAUI</strong></li>
+              <li>VR / XR (OpenXR, Meta Quest, HTC Vive)</li>
+              <li>Android SDK, Windows, Linux</li>
+            </ul>
+          </div>
+
+          <!-- 2. Architecture & Patterns -->
+          <div class="skill-col">
+            <span class="skill-col-title">
+              <span class="lang-ru">Архитектура и паттерны</span>
+              <span class="lang-en">Architecture &amp; Patterns</span>
+            </span>
+            <ul class="skill-col-list">
+              <li>OOP, SOLID, Design Patterns</li>
+              <li>ECS</li>
+              <li>Zenject, VContainer, Reflex (DI)</li>
+              <li>UniTask, UniRx, async/await</li>
+              <li>
+                <span class="lang-ru">Машины состояний (HSM, FSM)</span>
+                <span class="lang-en">State Machines (HSM, FSM)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. Multiplayer & Networking -->
+          <div class="skill-col">
+            <span class="skill-col-title">
+              <span class="lang-ru">Сеть и мультиплеер</span>
+              <span class="lang-en">Multiplayer &amp; Networking</span>
+            </span>
+            <ul class="skill-col-list">
+              <li>
+                <span class="lang-ru">Клиент-серверная архитектура</span>
+                <span class="lang-en">Client-Server Architecture</span>
+              </li>
+              <li>Mirror Networking</li>
+              <li>Custom TCP &amp; Sockets</li>
+              <li>REST API integration</li>
+            </ul>
+          </div>
+
+          <!-- 4. Graphics & Optimization -->
+          <div class="skill-col">
+            <span class="skill-col-title">
+              <span class="lang-ru">Графика и оптимизация</span>
+              <span class="lang-en">Graphics &amp; Optimization</span>
+            </span>
+            <ul class="skill-col-list">
+              <li>
+                <span class="lang-ru">Профилирование (CPU, GPU, Memory)</span>
+                <span class="lang-en">Profiling (CPU, GPU, Memory)</span>
+              </li>
+              <li>
+                <span class="lang-ru">Оптимизация под мобильные и standalone XR</span>
+                <span class="lang-en">Optimization for Mobile &amp; Standalone XR</span>
+              </li>
+              <li>URP &amp; HDRP Pipelines</li>
+              <li>HLSL / ShaderLab, Shader Graph</li>
+              <li>Burst Compiler &amp; Jobs System</li>
+            </ul>
+          </div>
+
+          <!-- 5. Workflow & Practices -->
+          <div class="skill-col">
+            <span class="skill-col-title">
+              <span class="lang-ru">Процессы и тулинг</span>
+              <span class="lang-en">Workflow &amp; Practices</span>
+            </span>
+            <ul class="skill-col-list">
+              <li>Git, GitLab CI/CD</li>
+              <li>UPM Packages</li>
+              <li>Agile / Scrum</li>
+              <li>Code Review &amp; Tech Guidelines</li>
+              <li>JetBrains Rider, Visual Studio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Other Work Projects -->
+      <section class="section-block" id="work">
+        <div class="section-header">
+          <span class="section-label">
+            <span class="lang-ru">Другие проекты</span>
+            <span class="lang-en">Other Projects</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-ru">Игровые системы, инфраструктура и мобильные проекты</span>
+            <span class="lang-en">Game Systems, Tooling &amp; Mobile</span>
+          </h2>
+          <p class="section-desc">
+            <span class="lang-ru">Другие коммерческие проекты, в разработке которых я принимал участие в JetStyle и THC.</span>
+            <span class="lang-en">Additional production systems, internal packages, and games developed at JetStyle and THC.</span>
+          </p>
+        </div>
+
+        <div class="compact-projects-grid">
+          <!-- Unity Build Tools -->
+          <article class="compact-card">
+            <div class="compact-header">
+              <span class="compact-domain">DevOps &bull; UPM Package</span>
+              <h3 class="compact-title">Unity Build Automation Tool</h3>
+              <span class="compact-company-date">
+                <span class="lang-ru">JetStyle &bull; Январь 2026 — Сентябрь 2026</span>
+                <span class="lang-en">JetStyle &bull; Jan 2026 — Sep 2026</span>
+              </span>
+            </div>
+            <p class="compact-desc">
+              <span class="lang-ru">
+                Внутренний UPM-пакет для команды. Позволяет в один клик последовательно собирать проекты сразу под Android, Windows и Linux без ручной смены платформ в редакторе. Включает автоматическую упаковку в zip-архивы и сквозную привязку номера сборки.
+              </span>
+              <span class="lang-en">
+                Internal team UPM package automating batch builds across Android, Windows, and Linux in a single click without manual editor platform switching. Features automated zip compression and automated build versioning.
+              </span>
+            </p>
+            <div class="compact-footer">
+              <div class="tags-row">
+                <span class="tag">Unity Editor API</span>
+                <span class="tag">UPM</span>
+                <span class="tag">C#</span>
+                <span class="tag">CI/CD</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CyberiadaLogic -->
+          <article class="compact-card">
+            <div class="compact-header">
+              <span class="compact-domain">Logic Engine &bull; HSM</span>
+              <h3 class="compact-title">CyberiadaLogic</h3>
+              <span class="compact-company-date">
+                <span class="lang-ru">JetStyle &bull; Май 2024 — Август 2026</span>
+                <span class="lang-en">JetStyle &bull; May 2024 — Aug 2026</span>
+              </span>
+            </div>
+            <p class="compact-desc">
+              <span class="lang-ru">
+                Библиотека для создания визуальных графов логики и поведения. Участвовал в создании редактора узлов в Unity, конвертера в формат GraphML и интерпретатора иерархических машин состояний (HSM) с удобным API мониторинга.
+              </span>
+              <span class="lang-en">
+                Architecture package for visual logic graphs and behavior state machines. Contributed to the node editor UI in Unity, GraphML converter, and Hierarchical State Machine (HSM) interpreter with a live state monitoring API.
+              </span>
+            </p>
+            <div class="compact-footer">
+              <div class="tags-row">
+                <span class="tag">Unity Editor API</span>
+                <span class="tag">UI Toolkit</span>
+                <span class="tag">State Machines</span>
+                <span class="tag">C#</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Drone Academy -->
+          <article class="compact-card">
+            <div class="compact-header">
+              <span class="compact-domain">Flight Simulator &bull; Quadcopters</span>
+              <h3 class="compact-title">Drone Academy</h3>
+              <span class="compact-company-date">
+                <span class="lang-ru">JetStyle &bull; Сентябрь 2024 — Январь 2026</span>
+                <span class="lang-en">JetStyle &bull; Sep 2024 — Jan 2026</span>
+              </span>
+            </div>
+            <p class="compact-desc">
+              <span class="lang-ru">
+                Симулятор квадрокоптера для обучения школьников пилотированию и полетам. Выступал тимлидом команды из 2–3 человек. Лично с нуля спроектировал и разработал внутриигровой редактор уровней для создания и настройки учебных трасс.
+              </span>
+              <span class="lang-en">
+                Quadcopter flight simulator designed to teach students piloting skills. Served as team lead of a 2–3 person team. Personally designed and developed an in-game level editor from scratch for creating and configuring training tracks.
+              </span>
+            </p>
+            <div class="compact-footer">
+              <div class="tags-row">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Simulation</span>
+                <span class="tag">Level Editor</span>
+                <span class="tag">Steam</span>
+              </div>
+              <a href="https://store.steampowered.com/app/3453500/Drone_Academy/" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                <span>Steam</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Arena -->
+          <article class="compact-card">
+            <div class="compact-header">
+              <span class="compact-domain">Tactical Sim &bull; Unity 6</span>
+              <h3 class="compact-title">Arena (Берлога)</h3>
+              <span class="compact-company-date">
+                <span class="lang-ru">JetStyle &bull; Май 2024 — Ноябрь 2025</span>
+                <span class="lang-en">JetStyle &bull; May 2024 — Nov 2025</span>
+              </span>
+            </div>
+            <p class="compact-desc">
+              <span class="lang-ru">
+                Тактическая сетевая игра про программирование и бои дронов («Берлога: Защита пасеки»). Был на проекте весь его жизненный цикл: разработал пошаговую детерминированную симуляцию боя для честных сражений без рассинхрона, геймплейные механики, сбор телеметрии и перевел проект на Unity 6.
+              </span>
+              <span class="lang-en">
+                Tactical multiplayer game featuring drone programming and combat ("Berloga"). Contributed through the full project lifecycle: engineered a stepped deterministic combat simulation loop, gameplay mechanics, telemetry pipelines, and upgraded the project to Unity 6.
+              </span>
+            </p>
+            <div class="compact-footer">
+              <div class="tags-row">
+                <span class="tag">Unity 6</span>
+                <span class="tag">C#</span>
+                <span class="tag">Simulation</span>
+                <span class="tag">Multiplayer</span>
+                <span class="tag">PC</span>
+              </div>
+              <a href="https://vkplay.ru/play/game/berloga-zaschita-paseki-33675/?mt_link_id=jfwxy9" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                <span>VK Play</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Flash Ball -->
+          <article class="compact-card">
+            <div class="compact-header">
+              <span class="compact-domain">Mobile Game &bull; Entitas ECS</span>
+              <h3 class="compact-title">Flash Ball</h3>
+              <span class="compact-company-date">
+                <span class="lang-ru">THC &bull; Май 2023 — Апрель 2024</span>
+                <span class="lang-en">THC &bull; May 2023 — Apr 2024</span>
+              </span>
+            </div>
+            <p class="compact-desc">
+              <span class="lang-ru">
+                Динамичная мобильная аркада для Android. Участвовал в разработке игры в составе команды из 6 человек на базе архитектуры <strong>ECS (Entitas)</strong>. Занимался реализацией игровых механик, логики компонентов и физики, а также оптимизацией для стабильной работы игры в 60 FPS на смартфонах.
+              </span>
+              <span class="lang-en">
+                Fast-paced mobile arcade game for Android. Contributed to core development as part of a 6-person engineering team using the <strong>Entitas ECS</strong> framework. Implemented gameplay mechanics, component logic, physics, and optimizations for smooth 60 FPS performance on mobile devices.
+              </span>
+            </p>
+            <div class="compact-footer">
+              <div class="tags-row">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Entitas (ECS)</span>
+                <span class="tag">Android</span>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.THC.flashball" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                <span>Google Play</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: About & Background -->
+      <section class="section-block" id="about">
+        <div class="section-header">
+          <span class="section-label">
+            <span class="lang-ru">Бэкграунд</span>
+            <span class="lang-en">Background</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-ru">Обо мне и образование</span>
+            <span class="lang-en">About &amp; Education</span>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Engineering & Interests -->
+          <div class="bio-card">
+            <p>
+              <span class="lang-ru">
+                По базовому образованию я инженер в области автоматизации производств. Это дало мне сильную математическую и аппаратную базу: понимание теории управления, физических датчиков, микроконтроллеров и потоков данных. В разработке софта я применяю тот же инженерный подход: делаю упор на стабильность рантайма, надежность сетевых протоколов и строгий профилинг под целевое «железо».
+              </span>
+              <span class="lang-en">
+                My foundation is in Industrial Automation Engineering, providing strong mathematical and hardware fundamentals: control theory, physical sensors, microcontrollers, and real-time data flows. I apply this disciplined engineering methodology to software development: focusing on runtime stability, resilient networking, and rigorous profiling on target hardware.
+              </span>
+            </p>
+
+            <span class="about-subhead">
+              <span class="lang-ru">Интересы и мейкерство</span>
+              <span class="lang-en">Interests &amp; Maker Mindset</span>
+            </span>
+
+            <div class="interests-row">
+              <span class="interest-tag">
+                <span class="lang-ru">🤖 Микроконтроллеры Arduino</span>
+                <span class="lang-en">🤖 Arduino &amp; Electronics</span>
+              </span>
+              <span class="interest-tag">
+                <span class="lang-ru">🖨️ 3D-печать и прототипирование</span>
+                <span class="lang-en">🖨️ 3D Printing &amp; Prototyping</span>
+              </span>
+              <span class="interest-tag">
+                <span class="lang-ru">🚵‍♂️ Горный велосипед (MTB)</span>
+                <span class="lang-en">🚵‍♂️ Mountain Biking (MTB)</span>
+              </span>
+              <span class="interest-tag">
+                <span class="lang-ru">🏕️ Походы и треккинг</span>
+                <span class="lang-en">🏕️ Wilderness Trekking</span>
+              </span>
+              <span class="interest-tag">
+                <span class="lang-ru">📷 Фотография</span>
+                <span class="lang-en">📷 Photography</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Formal Education Card -->
+          <div class="edu-card">
+            <span class="edu-type">
+              <span class="lang-ru">Высшее образование</span>
+              <span class="lang-en">Higher Education</span>
+            </span>
+            <h3 class="edu-institution">
+              <span class="lang-ru">Уральский государственный горный университет</span>
+              <span class="lang-en">Ural State Mining University</span>
+            </h3>
+            <p class="edu-degree">
+              <span class="lang-ru">Бакалавриат &bull; «Электрификация и автоматизация производств»</span>
+              <span class="lang-en">Bachelor’s Degree &bull; Automation &amp; Electrical Engineering</span>
+            </p>
+            <p class="edu-meta">
+              <span class="lang-ru">2018 — 2022 &bull; Екатеринбург</span>
+              <span class="lang-en">2018 — 2022 &bull; Yekaterinburg, Russia</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div>
+          <span>&copy; 2026 Evgeny Batenkov &bull; </span>
+          <span class="lang-ru">Екатеринбург</span>
+          <span class="lang-en">Yekaterinburg, Russia</span>
+        </div>
+        <div>
+          <a href="https://github.com/redlroses" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">GitHub</a>
+          <span> &bull; </span>
+          <a href="https://t.me/redlroses" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Telegram</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

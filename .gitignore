@@ -1,0 +1,11 @@
+# Private credentials & tokens
+gitlab_token.txt
+*.token
+
+# Large / Raw source docs
+*.rtf
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db

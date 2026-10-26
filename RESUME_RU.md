@@ -56,7 +56,7 @@
   * **Unity Build Tools (Январь 2026 — Сентябрь 2026):** разработал пакет автоматической пакетной сборки под Android, Windows и Linux в один клик с архивацией и сквозной привязкой номера сборки;
   * **CyberiadaLogic (Май 2024 — Август 2026):** участвовал в разработке редактора узлов и движка иерархических машин состояний (HSM).
 
-**Стек:** C#, .NET MAUI, Unity 6 & 2022, HDRP, URP, OpenXR (HTC Vive, Meta Quest), Mirror, Final IK, HLSL/ShaderLab, Git, UPM.
+**Стек:** C#, Unity 6 & 2022, .NET MAUI (приложение оператора), HDRP, URP, OpenXR (HTC Vive, Meta Quest), Mirror, Final IK, HLSL/ShaderLab, Git, UPM.
 
 ---
 
@@ -76,7 +76,7 @@
 ---
 
 ## 🛠 Навыки и стек:
-* **Языки и платформы:** C# (.NET, 4+ года коммерческого опыта), Unity, .NET MAUI, VR / XR (OpenXR, Meta Quest, HTC Vive), Android SDK, Windows, Linux.
+* **Языки и платформы:** C# (.NET, 4+ года коммерческого опыта), Unity, VR / XR (OpenXR, Meta Quest, HTC Vive), .NET MAUI (сопутствующие приложения), Android SDK, Windows, Linux.
 * **Архитектура и паттерны:** OOP, SOLID, Design Patterns, ECS, DI (Zenject, VContainer, Reflex), UniTask, UniRx, async/await, иерархические машины состояний (HSM, FSM).
 * **Сеть и мультиплеер:** Клиент-серверная архитектура, Mirror Networking, кастомные сетевые протоколы (TCP, сокеты), REST API integration.
 * **Графика и оптимизация:** Профилирование производительности (Unity Profiler, Frame Debugger, Memory Profiler), оптимизация под мобильные устройства и автономный XR (draw calls, batching), URP, HDRP, HLSL / ShaderLab, Shader Graph, Burst Compiler, Jobs System.

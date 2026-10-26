@@ -15,7 +15,7 @@
 **Апрель 2024 — по настоящее время (2 года 7 месяцев)**  
 **Должность:** Unity / XR Developer  
 
-Разработка коммерческих LBE VR-аттракционов, корпоративных XR-инструментов, сетевых симуляторов и сопутствующего софта.
+Разработка коммерческих LBE VR-аттракционов, корпоративных XR-инструментов, сетевых симуляторов и мобильных приложений.
 
 **Ключевые проекты:**
 
@@ -76,7 +76,7 @@
 ---
 
 ## 🛠 Навыки и стек:
-* **Языки и платформы:** C# (.NET, 4+ года коммерческого опыта), Unity, VR / XR (OpenXR, Meta Quest, HTC Vive), .NET MAUI (сопутствующие приложения), Android SDK, Windows, Linux.
+* **Языки и платформы:** C# (.NET, 4+ года коммерческого опыта), Unity, VR / XR (OpenXR, Meta Quest, HTC Vive), .NET MAUI (мобильные приложения), Android SDK, Windows, Linux.
 * **Архитектура и паттерны:** OOP, SOLID, Design Patterns, ECS, DI (Zenject, VContainer, Reflex), UniTask, UniRx, async/await, иерархические машины состояний (HSM, FSM).
 * **Сеть и мультиплеер:** Клиент-серверная архитектура, Mirror Networking, кастомные сетевые протоколы (TCP, сокеты), REST API integration.
 * **Графика и оптимизация:** Профилирование производительности (Unity Profiler, Frame Debugger, Memory Profiler), оптимизация под мобильные устройства и автономный XR (draw calls, batching), URP, HDRP, HLSL / ShaderLab, Shader Graph, Burst Compiler, Jobs System.

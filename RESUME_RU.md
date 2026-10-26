@@ -75,6 +75,18 @@
 
 ---
 
+## 🔬 Личные проекты и R&D:
+
+* **Ray Marching Volumetric Renderer & Lava Lamp (URP / HLSL):**
+  * Процедурный объемный рендеринг в реальном времени методом Ray Marching на базе Unity URP и конвейера RenderGraph;
+  * Математическое моделирование геометрии через функции расстояния (SDF: сферы, торы, кубы) и полиномиальное сглаживание (`smin`) для динамического слияния частиц без полигональных мешей (эффект лава-лампы / metaballs);
+  * Оптимизация прохода лучей с аналитическим отсечением по ограничивающему объему (Ray-AABB Bounding Box) для сохранения высокого FPS;
+  * Кастомная модель освещения в HLSL: расчет нормалей по градиенту SDF, интеграция с URP Main Light, Fresnel/Rim lighting, спекулярные блики, внутреннее свечение и процедурный аутлайн;
+  * Архитектура ScriptableRendererFeature с поддержкой параметров Unity Volume и заделом под Single-Pass Stereo (VR);
+  * **Репозиторий:** https://github.com/redlroses/ray-marching
+
+---
+
 ## 🛠 Навыки и стек:
 * **Языки и платформы:** C# (.NET, 4+ года коммерческого опыта), Unity, VR / XR (OpenXR, Meta Quest, HTC Vive), .NET MAUI (мобильные приложения), Android SDK, Windows, Linux.
 * **Архитектура и паттерны:** OOP, SOLID, Design Patterns, ECS, DI (Zenject, VContainer, Reflex), UniTask, UniRx, async/await, иерархические машины состояний (HSM, FSM).

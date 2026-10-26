@@ -68,6 +68,12 @@
               </a>
             </li>
             <li>
+              <a href="#personal">
+                <span class="lang-ru">Личные проекты</span>
+                <span class="lang-en">Personal</span>
+              </a>
+            </li>
+            <li>
               <a href="#about">
                 <span class="lang-ru">Обо мне</span>
                 <span class="lang-en">About</span>
@@ -759,6 +765,94 @@
               </div>
               <a href="https://play.google.com/store/apps/details?id=com.THC.flashball" target="_blank" rel="noopener noreferrer" class="outbound-link">
                 <span>Google Play</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Personal Projects & R&D -->
+      <section class="section-block" id="personal">
+        <div class="section-header">
+          <span class="section-label">
+            <span class="lang-ru">R&amp;D и эксперименты</span>
+            <span class="lang-en">R&amp;D &amp; Experiments</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-ru">Личные проекты</span>
+            <span class="lang-en">Personal Projects</span>
+          </h2>
+          <p class="section-desc">
+            <span class="lang-ru">Самостоятельные исследования в области компьютерной графики, кастомных шейдеров и процедурного рендеринга.</span>
+            <span class="lang-en">Independent explorations in computer graphics, custom shaders, and procedural rendering.</span>
+          </p>
+        </div>
+
+        <div class="highlights-list">
+          <!-- Ray Marching Lava Lamp -->
+          <article class="highlight-project">
+            <div class="highlight-top">
+              <div class="highlight-title-group">
+                <span class="highlight-domain">Graphics Programming &bull; Volumetric Rendering &bull; URP RenderGraph</span>
+                <h3 class="highlight-title">Ray Marching Volumetric Renderer &amp; Lava Lamp</h3>
+                <span class="highlight-meta">
+                  <span class="lang-ru">Личный R&amp;D проект &bull; Solo Developer</span>
+                  <span class="lang-en">Personal R&amp;D Project &bull; Solo Developer</span>
+                </span>
+              </div>
+              <div class="tags-row">
+                <span class="tag">Unity 6 / URP</span>
+                <span class="tag">HLSL / ShaderLab</span>
+                <span class="tag">Ray Marching</span>
+                <span class="tag">SDF</span>
+                <span class="tag">RenderGraph</span>
+                <span class="tag">ScriptableRendererFeature</span>
+              </div>
+            </div>
+
+            <p class="highlight-overview">
+              <span class="lang-ru">
+                Движок процедурного объемного рендеринга в реальном времени на базе Unity Universal Render Pipeline (URP). Проект исследует динамическую генерацию и симуляцию органических поверхностей без использования полигональных 3D-мешей методом трассировки лучей через поля расстояний (Ray Marching over Signed Distance Fields).
+              </span>
+              <span class="lang-en">
+                Real-time procedural volumetric rendering engine built on Unity’s Universal Render Pipeline (URP). Explores dynamic generation and simulation of organic fluid surfaces without polygonal 3D meshes using Ray Marching over Signed Distance Fields (SDF).
+              </span>
+            </p>
+
+            <div class="thematic-blocks">
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Математическое моделирование SDF и динамическое слияние.</strong> Процедурная генерация геометрических примитивов (сферы, торы, кубы) через знаковые функции расстояния. Реализовано полиномиальное гладкое объединение форм (Smooth Minimum / <code>smin</code>), позволяющее частицам бесшовно перетекать и сливаться в единую вязкую структуру наподобие лава-лампы (эффект метасфер / metaballs) прямо в пиксельном шейдере.
+                </span>
+                <span class="lang-en">
+                  <strong>SDF Primitive Modeling &amp; Dynamic Fluid Merging.</strong> Mathematical generation of geometric primitives (spheres, tori, boxes) via Signed Distance Functions. Implemented polynomial Smooth Minimum (<code>smin</code>) blending, enabling dynamic particles to organically melt and fuse into a viscous fluid body mimicking a lava lamp (metaball effect) entirely within the pixel shader.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>Оптимизация и ускорение через Ray-AABB Bounding Box.</strong> Для исключения холостых шагов маршинга на пустом фоне реализовано аналитическое отсечение лучей по габаритному контейнеру (Ray-AABB Intersection). Трассировка луча выполняется строго между точками входа и выхода из активного объема, что исключает лишнюю нагрузку на GPU и сохраняет высокий FPS.
+                </span>
+                <span class="lang-en">
+                  <strong>Performance Optimization &amp; Ray-AABB Bounding Box.</strong> Eliminated redundant ray marching steps across empty scene background via analytical bounding box clipping (Ray-AABB Intersection). Ray traversal is constrained strictly between entry and exit points of the active volume, cutting GPU overhead and maintaining high framerates.
+                </span>
+              </p>
+              <p class="thematic-item">
+                <span class="lang-ru">
+                  <strong>HLSL-модель освещения, шейдинг и RenderGraph.</strong> Аналитическое восстановление нормалей по градиенту поля расстояний, интеграция с источником направленного света сцены (URP Main Light), модель затенения с Rim/Fresnel эффектом, спекулярными бликами, регулируемым внутренним свечением (Subsurface Glow) и контурным аутлайном. Архитектура оформлена в виде <code>ScriptableRendererFeature</code> с поддержкой современного RenderGraph API и заделом под Single-Pass Stereo (VR).
+                </span>
+                <span class="lang-en">
+                  <strong>HLSL Shading Model, URP Lighting &amp; RenderGraph.</strong> Analytical surface normal reconstruction from distance field gradients, native integration with URP Main Light, custom shading model featuring Rim/Fresnel glow, specular highlights, controllable subsurface glow, and procedural outlines. Designed as a modular <code>ScriptableRendererFeature</code> compatible with the modern RenderGraph pipeline and Single-Pass Stereo (VR).
+                </span>
+              </p>
+            </div>
+
+            <div>
+              <a href="https://github.com/redlroses/ray-marching" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                <span>
+                  <span class="lang-ru">Репозиторий на GitHub</span>
+                  <span class="lang-en">Source on GitHub</span>
+                </span>
                 <span class="arrow-icon">↗</span>
               </a>
             </div>

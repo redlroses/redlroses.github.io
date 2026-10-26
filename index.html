@@ -776,78 +776,47 @@
       <section class="section-block" id="personal">
         <div class="section-header">
           <span class="section-label">
-            <span class="lang-ru">R&amp;D и эксперименты</span>
-            <span class="lang-en">R&amp;D &amp; Experiments</span>
+            <span class="lang-ru">Эксперименты</span>
+            <span class="lang-en">Experiments</span>
           </span>
           <h2 class="section-title">
             <span class="lang-ru">Личные проекты</span>
             <span class="lang-en">Personal Projects</span>
           </h2>
           <p class="section-desc">
-            <span class="lang-ru">Самостоятельные исследования в области компьютерной графики, кастомных шейдеров и процедурного рендеринга.</span>
-            <span class="lang-en">Independent explorations in computer graphics, custom shaders, and procedural rendering.</span>
+            <span class="lang-ru">Самостоятельные исследования в области компьютерной графики, шейдеров и рендеринга.</span>
+            <span class="lang-en">Independent explorations in computer graphics, custom shaders, and rendering techniques.</span>
           </p>
         </div>
 
-        <div class="highlights-list">
+        <div class="compact-projects-grid">
           <!-- Ray Marching Lava Lamp -->
-          <article class="highlight-project">
-            <div class="highlight-top">
-              <div class="highlight-title-group">
-                <span class="highlight-domain">Graphics Programming &bull; Volumetric Rendering &bull; URP RenderGraph</span>
-                <h3 class="highlight-title">Ray Marching Volumetric Renderer &amp; Lava Lamp</h3>
-                <span class="highlight-meta">
-                  <span class="lang-ru">Личный R&amp;D проект &bull; Solo Developer</span>
-                  <span class="lang-en">Personal R&amp;D Project &bull; Solo Developer</span>
-                </span>
-              </div>
-              <div class="tags-row">
-                <span class="tag">Unity 6 / URP</span>
-                <span class="tag">HLSL / ShaderLab</span>
-                <span class="tag">Ray Marching</span>
-                <span class="tag">SDF</span>
-                <span class="tag">RenderGraph</span>
-                <span class="tag">ScriptableRendererFeature</span>
-              </div>
+          <article class="compact-card">
+            <div class="compact-header">
+              <span class="compact-domain">Graphics &bull; Shaders</span>
+              <h3 class="compact-title">Ray Marching Lava Lamp</h3>
+              <span class="compact-company-date">
+                <span class="lang-ru">Личный R&amp;D проект &bull; Solo Developer</span>
+                <span class="lang-en">Personal R&amp;D &bull; Solo Developer</span>
+              </span>
             </div>
 
-            <p class="highlight-overview">
+            <p class="compact-desc">
               <span class="lang-ru">
-                Движок процедурного объемного рендеринга в реальном времени на базе Unity Universal Render Pipeline (URP). Проект исследует динамическую генерацию и симуляцию органических поверхностей без использования полигональных 3D-мешей методом трассировки лучей через поля расстояний (Ray Marching over Signed Distance Fields).
+                Процедурный рендерер объемной графики на базе Unity URP и конвейера RenderGraph. Сцена строится методом Ray Marching по полям расстояний (SDF) без полигональных 3D-мешей, симулируя динамическое органическое слияние частиц (эффект лава-лампы). Включает оптимизацию прохода лучей через габаритный контейнер (Ray-AABB), расчет нормалей и кастомную HLSL-модель освещения (Main Light, Rim, Glow).
               </span>
               <span class="lang-en">
-                Real-time procedural volumetric rendering engine built on Unity’s Universal Render Pipeline (URP). Explores dynamic generation and simulation of organic fluid surfaces without polygonal 3D meshes using Ray Marching over Signed Distance Fields (SDF).
+                Real-time procedural volumetric renderer built on Unity URP and the RenderGraph pipeline. Uses Signed Distance Field (SDF) Ray Marching to render dynamic organic fluid shapes (lava lamp effect) without polygonal 3D meshes. Features Ray-AABB bounding box acceleration, analytical normal reconstruction, and a custom HLSL lighting model (Main Light, Rim, Glow).
               </span>
             </p>
 
-            <div class="thematic-blocks">
-              <p class="thematic-item">
-                <span class="lang-ru">
-                  <strong>Математическое моделирование SDF и динамическое слияние.</strong> Процедурная генерация геометрических примитивов (сферы, торы, кубы) через знаковые функции расстояния. Реализовано полиномиальное гладкое объединение форм (Smooth Minimum / <code>smin</code>), позволяющее частицам бесшовно перетекать и сливаться в единую вязкую структуру наподобие лава-лампы (эффект метасфер / metaballs) прямо в пиксельном шейдере.
-                </span>
-                <span class="lang-en">
-                  <strong>SDF Primitive Modeling &amp; Dynamic Fluid Merging.</strong> Mathematical generation of geometric primitives (spheres, tori, boxes) via Signed Distance Functions. Implemented polynomial Smooth Minimum (<code>smin</code>) blending, enabling dynamic particles to organically melt and fuse into a viscous fluid body mimicking a lava lamp (metaball effect) entirely within the pixel shader.
-                </span>
-              </p>
-              <p class="thematic-item">
-                <span class="lang-ru">
-                  <strong>Оптимизация и ускорение через Ray-AABB Bounding Box.</strong> Для исключения холостых шагов маршинга на пустом фоне реализовано аналитическое отсечение лучей по габаритному контейнеру (Ray-AABB Intersection). Трассировка луча выполняется строго между точками входа и выхода из активного объема, что исключает лишнюю нагрузку на GPU и сохраняет высокий FPS.
-                </span>
-                <span class="lang-en">
-                  <strong>Performance Optimization &amp; Ray-AABB Bounding Box.</strong> Eliminated redundant ray marching steps across empty scene background via analytical bounding box clipping (Ray-AABB Intersection). Ray traversal is constrained strictly between entry and exit points of the active volume, cutting GPU overhead and maintaining high framerates.
-                </span>
-              </p>
-              <p class="thematic-item">
-                <span class="lang-ru">
-                  <strong>HLSL-модель освещения, шейдинг и RenderGraph.</strong> Аналитическое восстановление нормалей по градиенту поля расстояний, интеграция с источником направленного света сцены (URP Main Light), модель затенения с Rim/Fresnel эффектом, спекулярными бликами, регулируемым внутренним свечением (Subsurface Glow) и контурным аутлайном. Архитектура оформлена в виде <code>ScriptableRendererFeature</code> с поддержкой современного RenderGraph API и заделом под Single-Pass Stereo (VR).
-                </span>
-                <span class="lang-en">
-                  <strong>HLSL Shading Model, URP Lighting &amp; RenderGraph.</strong> Analytical surface normal reconstruction from distance field gradients, native integration with URP Main Light, custom shading model featuring Rim/Fresnel glow, specular highlights, controllable subsurface glow, and procedural outlines. Designed as a modular <code>ScriptableRendererFeature</code> compatible with the modern RenderGraph pipeline and Single-Pass Stereo (VR).
-                </span>
-              </p>
-            </div>
-
-            <div>
+            <div class="compact-footer">
+              <div class="tags-row">
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+                <span class="tag">Shaders / HLSL</span>
+                <span class="tag">URP</span>
+              </div>
               <a href="https://github.com/redlroses/ray-marching" target="_blank" rel="noopener noreferrer" class="outbound-link">
                 <span>
                   <span class="lang-ru">Репозиторий на GitHub</span>

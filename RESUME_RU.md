@@ -82,7 +82,7 @@
   * Быстрое прототипирование механик, физики и геймплейной логики в условиях жестких дедлайнов (48–96 часов);
   * **Проекты:**
     * **GMTK 2026:** [Firefighters на itch.io](https://wowash.itch.io/firefighters)
-    * **GMTK 2025:** [Water Cycle на itch.io](https://wowash.itch.io/water-cycle) · [Исходный код на GitHub](https://github.com/wowa-shat/GMTK-Game-Jam-2025)
+    * **GMTK 2025:** [Water Cycle на itch.io](https://wowash.itch.io/water-cycle)
 
 * **Ray Marching Lava Lamp (Unity URP / HLSL):**
   * Процедурный объемный рендерер на Unity URP (RenderGraph) с генерацией органических форм методом Ray Marching по полям расстояний (SDF) без полигональных 3D-мешей;

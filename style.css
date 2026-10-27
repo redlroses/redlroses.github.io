@@ -591,6 +591,13 @@ body {
   line-height: 1;
 }
 
+.card-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
 /* Other Work Projects Grid */
 .compact-projects-grid {
   display: grid;

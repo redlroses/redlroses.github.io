@@ -75,19 +75,19 @@
 
 ---
 
-## 🔬 Личные проекты и Game Jams:
-
-* **Game Jams (GMTK Game Jam 2025 & 2026):**
-  * Участие в ежегодных гейм-джемах в составе небольших междисциплинарных команд;
-  * Быстрое прототипирование механик, физики и геймплейной логики в условиях жестких дедлайнов (48–96 часов);
-  * **Проекты:**
-    * **GMTK 2026:** [Firefighters на itch.io](https://wowash.itch.io/firefighters)
-    * **GMTK 2025:** [Water Cycle на itch.io](https://wowash.itch.io/water-cycle)
+## 🔬 Личные проекты:
 
 * **Ray Marching Lava Lamp (Unity URP / HLSL):**
   * Процедурный объемный рендерер на Unity URP (RenderGraph) с генерацией органических форм методом Ray Marching по полям расстояний (SDF) без полигональных 3D-мешей;
   * Динамическое слияние частиц (эффект лава-лампы), оптимизация прохода лучей через габаритный контейнер (Ray-AABB) и кастомная HLSL-модель освещения (Main Light, Rim, Glow);
   * **Репозиторий:** https://github.com/redlroses/ray-marching
+
+---
+
+## 🎮 Game Jams:
+
+* **GMTK Game Jam 2026:** [Firefighters (itch.io)](https://wowash.itch.io/firefighters)
+* **GMTK Game Jam 2025:** [Water Cycle (itch.io)](https://wowash.itch.io/water-cycle)
 
 ---
 
